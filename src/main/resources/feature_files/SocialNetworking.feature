@@ -26,3 +26,13 @@ Feature: Imagine you are building a social network. Starting from simple functio
     Examples:
       | postId | name           | email            | body                   |
       | 2      | my new comment | lateef@gmail.com | I am writing a comment |
+
+
+  Scenario Outline: Test that existing posts can be retreived with a GET request
+    Given service is up and running
+    When i search for "<id>" of a post with a GET method
+    Then i should get the correct "<id>", "<title>" and "<body>" returned with status code of 200
+    Examples:
+      | id | title                                                                      | body                                                                                                                                                              |
+      | 1  | sunt aut facere repellat provident occaecati excepturi optio reprehenderit | quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto |
+      | 5  | nesciunt quas odio                                                         | repudiandae veniam quaerat sunt sed\nalias aut fugiat sit autem sed est\nvoluptatem omnis possimus esse voluptatibus quis\nest aut tenetur dolor neque            |

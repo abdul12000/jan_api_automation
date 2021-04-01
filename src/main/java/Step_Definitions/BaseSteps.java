@@ -21,9 +21,9 @@ public class BaseSteps {
 
     public BaseSteps(){
         MakeACommentPayload = "/templates/CommentOnPost.json";
-//        MakeAPostPayload = "/templates/MakeApost.json";
+        MakeAPostPayload = "/templates/MakeApost.json";
         serviceUrl = "https://jsonplaceholder.typicode.com/";
-//        makeAPostEndpoint = serviceUrl + "posts/";
+        makeAPostEndpoint = serviceUrl + "posts/";
         makeCommentEndpoint = serviceUrl + "comments/";
 //        createAUserEndpoint = serviceUrl + "users/";
     }
